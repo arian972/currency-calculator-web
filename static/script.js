@@ -1,29 +1,20 @@
 const calcDisplay = document.getElementById('calc-display');
-const maxWidthPx = Math.max(window.innerWidth * 0.46, 400);
 const errorMessage = "SYNTAX ERROR";
-
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
-ctx.font = window.getComputedStyle(calcDisplay).font;
 
 const caret = document.createElement('span');
 caret.id = 'caret';
 caret.style.display = 'inline-block';
 caret.style.width = '2px';
 caret.style.height = '1em';
-caret.style.backgroundColor = 'black';
+caret.style.backgroundColor = '#DFD79D';
 caret.style.animation = 'blink 1s step-start infinite';
 caret.style.verticalAlign = 'bottom';
 
 calcDisplay.appendChild(caret);
 
-function moveCaretToEnd() {
-  calcDisplay.appendChild(caret);
-}
-
 function updateDisplay(text) {
   calcDisplay.textContent = text;
-  moveCaretToEnd();
+  calcDisplay.appendChild(caret);
 }
 
 const symbolCells = document.querySelectorAll('.symbol');
@@ -36,12 +27,8 @@ symbolCells.forEach(cell => {
     const letter = cell.getAttribute('data-letter');
     const currentText = calcDisplay.textContent;
     const newText = currentText + letter;
-
-    const newTextWidth = ctx.measureText(newText).width;
-
-    if (newTextWidth <= maxWidthPx) {
-      updateDisplay(newText);
-    }
+    updateDisplay(newText);
+  
   });
 });
 
