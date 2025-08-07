@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Calculator</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+    <div class="calc-container">
+        <div class="display" id="calc-display">
+            <span id="caret"></span>
+        </div> <!-- Top display -->
+        <div class="grid user-select-none"> <!-- Button grid -->
+            <div class="cell symbol" data-letter="7">7</div>
+            <div class="cell symbol" data-letter="8">8</div>
+            <div class="cell symbol" data-letter="9">9</div>
+            <div class="cell" id="calc-backspace">⌫</div>
+            <div class="cell" id="calc-clear">C</div>
+            <div class="cell symbol" data-letter="4">4</div>
+            <div class="cell symbol" data-letter="5">5</div>
+            <div class="cell symbol" data-letter="6">6</div>
+            <div class="cell symbol" data-letter="×">×</div>
+            <div class="cell symbol" data-letter="÷">÷</div>
+            <div class="cell symbol" data-letter="1">1</div>
+            <div class="cell symbol" data-letter="2">2</div>
+            <div class="cell symbol" data-letter="3">3</div>
+            <div class="cell symbol" data-letter="+">+</div>
+            <div class="cell symbol" data-letter="−">−</div>
+            <div class="cell symbol" data-letter="0">0</div>
+            <div class="cell symbol" data-letter=".">.</div>
+            <div class="cell symbol" data-letter="("> (</div>
+            <div class="cell symbol" data-letter=")"> )</div>
+            <div class="cell" id="calc-equals">=</div>
+        </div>
+    </div>
+
+
+    <script src="static/script.js"></script>
+</body>
+</html>
