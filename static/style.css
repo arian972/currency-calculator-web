@@ -13,6 +13,12 @@
 body {
   background-color: #191919; /* deep gray, almost black */
   color: #f5f5f5; /* light text for readability */
+
+  /* Center everything */
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  justify-content: center; /* vertical centering */
+  align-items: center; /* horizontal centering */
 }
 
 .user-select-none {
@@ -93,7 +99,50 @@ body {
     width: 180px;
     object-fit: cover;
     display: block;
-    margin: 0 auto 20px;
+    margin: 10px 0;
     border-radius: 30px;
     box-shadow: 0 0px 30px rgba(0, 0, 0, 1);
+}
+
+.currency-converter {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: var(--main-bg);
+    border-radius: 15px;
+    border: 8px solid var(--border-color);
+    width: max(50vw, 400px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.currency-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.currency-row input {
+    flex: 1;
+    font-size: 2em;
+    text-align: right;
+    padding: 10px;
+    background-color: var(--display-bg);
+    color: var(--display-text);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.currency-row select {
+    flex: 1;
+    font-size: 1.2em;
+    padding: 8px;
+    background-color: var(--cell-bg);
+    color: var(--cell-text);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.currency-field {
+  width: 50%;
 }
